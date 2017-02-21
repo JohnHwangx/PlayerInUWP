@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="PureMusicPlayer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PureMusicPlayer"
+    xmlns:converter="using:PureMusicPlayer.Converter"
+    xmlns:songListView="using:PureMusicPlayer.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interop="using:Windows.UI.Xaml.Interop"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <x:Double x:Key="Height">30</x:Double>
+        <x:Double x:Key="Width">80</x:Double>
+        <converter:SongDurationConverter x:Key="SongDurationConverter"/>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Background="Azure">
+            <Button Content="添加" Height="{StaticResource Height}" Width="{StaticResource Width}" 
+                    HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,50,0"
+                    Command="{Binding AddCommand}"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Border BorderThickness="2" CornerRadius="30" Margin="10" BorderBrush="Black">
+                <Grid>
+                    <songListView:SongListView Margin="20"/>
+                    <ProgressRing IsActive="{Binding IsWaitting,Mode=OneWay}" Width="40" Height="40" />
+                </Grid>
+            </Border>
+        </Grid>
+        <RelativePanel Grid.Row="2" Background="Azure">
+            <Image x:Name="Image" Source="{Binding PlayingSong.AlbumCover}" Height="60" Width="60" Margin="20,20,0,0" />
+            <Button x:Name="LastButton" RelativePanel.RightOf="Image" Height="{StaticResource Height}" Width="{StaticResource Width}" Content="上一曲" Margin="20,35,0,0"/>
+            <Button x:Name="PlayPause" RelativePanel.RightOf="LastButton" Height="{StaticResource Height}" Width="{StaticResource Width}" Content="播放" Margin="20,35,0,0"/>
+            <Button x:Name="NextButton" RelativePanel.RightOf="PlayPause" Height="{StaticResource Height}" Width="{StaticResource Width}" Content="下一曲" Margin="20,35,0,0"/>
+            <Grid x:Name="SliderGrid" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignRightWith="" RelativePanel.AlignLeftWith="" RelativePanel.LeftOf="PlayMode" RelativePanel.RightOf="NextButton" Padding="0" Margin="20,0" Height="80">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <RelativePanel>
+                    <TextBlock x:Name="SongName" Text="{Binding PlayingSong.Title}" RelativePanel.AlignVerticalCenterWithPanel="True"></TextBlock>
+                    <TextBlock x:Name="Block" Text="-" RelativePanel.RightOf="SongName" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="5,0"></TextBlock>
+                    <TextBlock x:Name="SongArtist" Text="{Binding PlayingSong.Artist}" RelativePanel.RightOf="Block"  RelativePanel.AlignVerticalCenterWithPanel="True"></TextBlock>
+                    <TextBlock x:Name="SongDuration" Text="{Binding PlayingSong.Duration,Converter={StaticResource SongDurationConverter}}" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignRightWithPanel="True"></TextBlock>
+                    <TextBlock x:Name="SplitSign" Text="/" RelativePanel.LeftOf="SongDuration" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="5,0"></TextBlock>
+                    <TextBlock x:Name="CurrentTime" Text="当前时间" RelativePanel.LeftOf="SplitSign"  RelativePanel.AlignVerticalCenterWithPanel="True"></TextBlock>
+
+                </RelativePanel>
+                <Slider Grid.Row="1" IsThumbToolTipEnabled="False"/>
+            </Grid>
+
+            <Button x:Name="PlayList" Content="播放列表" Height="{StaticResource Height}" Width="{StaticResource Width}" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,20,0"></Button>
+            <Button x:Name="PlayMode" Content="播放模式" Height="{StaticResource Height}" Width="{StaticResource Width}" RelativePanel.LeftOf="PlayList" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,20,0"></Button>
+        </RelativePanel>
+    </Grid>
+</Page>

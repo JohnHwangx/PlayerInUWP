@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID3App", "ID3App\ID3App.csproj", "{E50585DF-CAB5-4B8A-B553-838800A4F772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PureMusicPlayer", "PureMusicPlayer\PureMusicPlayer.csproj", "{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Debug|ARM.Build.0 = Debug|ARM
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Debug|ARM.Deploy.0 = Debug|ARM
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Debug|x64.ActiveCfg = Debug|x64
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Debug|x64.Build.0 = Debug|x64
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Debug|x64.Deploy.0 = Debug|x64
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Debug|x86.ActiveCfg = Debug|x86
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Debug|x86.Build.0 = Debug|x86
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Debug|x86.Deploy.0 = Debug|x86
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Release|ARM.ActiveCfg = Release|ARM
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Release|ARM.Build.0 = Release|ARM
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Release|ARM.Deploy.0 = Release|ARM
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Release|x64.ActiveCfg = Release|x64
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Release|x64.Build.0 = Release|x64
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Release|x64.Deploy.0 = Release|x64
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Release|x86.ActiveCfg = Release|x86
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Release|x86.Build.0 = Release|x86
+		{E50585DF-CAB5-4B8A-B553-838800A4F772}.Release|x86.Deploy.0 = Release|x86
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Debug|ARM.ActiveCfg = Debug|ARM
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Debug|ARM.Build.0 = Debug|ARM
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Debug|ARM.Deploy.0 = Debug|ARM
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Debug|x64.ActiveCfg = Debug|x64
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Debug|x64.Build.0 = Debug|x64
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Debug|x64.Deploy.0 = Debug|x64
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Debug|x86.ActiveCfg = Debug|x86
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Debug|x86.Build.0 = Debug|x86
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Debug|x86.Deploy.0 = Debug|x86
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Release|ARM.ActiveCfg = Release|ARM
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Release|ARM.Build.0 = Release|ARM
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Release|ARM.Deploy.0 = Release|ARM
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Release|x64.ActiveCfg = Release|x64
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Release|x64.Build.0 = Release|x64
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Release|x64.Deploy.0 = Release|x64
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Release|x86.ActiveCfg = Release|x86
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Release|x86.Build.0 = Release|x86
+		{6FBD57A4-2C3B-49C9-9CF6-8007FA183A96}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
